@@ -1,8 +1,8 @@
 {
   "name": "iut-project",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "API nodeJS gestion bibliothèque de films et d'utilisateurs",
+  "author": "Benjamin Rodrigues",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -12,12 +12,26 @@
   "scripts": {
     "start": "node server",
     "test": "lab -a @hapi/code -I \"__core-js_shared__,CSS,regeneratorRuntime,core\" -L",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "devstart": "nodemon server"
   },
   "dependencies": {
     "@hapi/boom": "9.x.x",
+    "@hapi/jwt": "^3.1.0",
     "@hapipal/haute-couture": "4.x.x",
-    "joi": "17.x.x"
+    "@hapipal/schmervice": "^2.1.0",
+    "@hapipal/schwifty": "6.x.x",
+    "br-encrypt": "^1.0.0",
+    "exiting": "6.0.1",
+    "joi": "17.x.x",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "objection": "2.x.x",
+    "sqlite3": "5.0.2"
+  },
+  "peerDependencies": {
+    "knex": "0.21.x"
   },
   "devDependencies": {
     "@hapi/code": "8.x.x",
@@ -25,8 +39,9 @@
     "@hapi/eslint-plugin-hapi": "4.x.x",
     "@hapi/glue": "8.x.x",
     "@hapi/hapi": "20.x.x",
+    "@hapi/hoek": "9.x.x",
     "@hapi/inert": "6.x.x",
-    "@hapi/lab": "24.x.x",
+    "@hapi/lab": "23.x.x",
     "@hapi/vision": "6.x.x",
     "@hapipal/confidence": "6.x.x",
     "@hapipal/hpal": "3.x.x",
@@ -35,7 +50,7 @@
     "babel-eslint": "10.x.x",
     "dotenv": "8.x.x",
     "eslint": "7.x.x",
-    "exiting": "6.x.x",
-    "hapi-swagger": "14.x.x"
+    "hapi-swagger": "14.x.x",
+    "knex": "^0.21.16"
   }
 }
